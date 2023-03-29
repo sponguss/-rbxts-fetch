@@ -1,0 +1,41 @@
+{
+  "name": "@rbxts/fetch",
+  "version": "1.0.0",
+  "description": "Fetch for Roblox-TS",
+  "main": "out/init.lua",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "fetch",
+    "node",
+    "roblox",
+    "roblox-ts",
+    "typescript",
+    "requests"
+  ],
+  "author": "spongus",
+  "license": "Unlicense",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "^2.1.0-types.1",
+    "@rbxts/types": "^1.0.668",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-roblox-ts": "^0.0.35",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.2"
+  }
+}
