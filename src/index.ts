@@ -28,9 +28,10 @@ export interface RequestOptions {
 		| "unsafe-url";
 	keepalive?: boolean;
 }
-export async function fetch(resource: string, options: RequestOptions): Promise<Response> {
+export async function fetch(resource: string, options?: RequestOptions): Promise<Response> {
 	return new Promise((resolve, reject) => {
 		xpcall(() => {
+			options = options || {};
 			options.headers = options.headers || {};
 			if (options.credentials === "omit") {
 				delete options.headers.Authorization;
